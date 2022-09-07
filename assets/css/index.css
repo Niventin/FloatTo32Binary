@@ -11,8 +11,7 @@
       font-size: 8px;
       
     }
-}
-
-input::placeholder{
-    font-size: 10px;
+    input::placeholder{
+        font-size: 10px;
+    }
 }
