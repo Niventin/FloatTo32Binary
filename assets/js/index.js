@@ -30,6 +30,9 @@ botao.addEventListener("click", function () {
   }
 
   xinput = input.value;
+  if (input.value < 0){
+    xinput = Math.abs(input.value);
+  }
   if (xinput >= 1)
   {while (xinput >= 2) {
     contadorExpoente++;
@@ -46,9 +49,13 @@ if(xinput < 1){
   string = "";
   contador = 0;
   while (xinput != 0.0) {
+    console.log(xinput)
     contador++;
-    if (xinput >= 1) {
+    if (xinput >= 1 && xinput < 2) {
       xinput -= 1;
+    }
+    else if (xinput >= 2){
+      xinput -= 2;
     }
     xinput *= 2;
     if (xinput >= 1) {
@@ -57,7 +64,9 @@ if(xinput < 1){
       string += "0";
     }
     if (contador == 23) break;
+    
   }
+  console.log(string.length)
   for (string; string.length < 23; contador++) {
     string += "0";
   }
